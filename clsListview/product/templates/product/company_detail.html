@@ -1,0 +1,28 @@
+{% extends 'product/basic_base.html' %}
+
+{% block content %}
+    <div class="container">
+            <div class="jumbotron">
+            <h1> Company details....!!</h1>
+            <h3>company Name:{{ company_details.name }}</h3>
+            <h3>company CEO:{{ company_details.ceo }}</h3>
+            <h3>company origin:{{ company_details.origin }}</h3>
+            <br>
+            <h4>company details...!</h4>
+
+        <!-- from product model there is related name = company with that we  -->
+        {% for data in company_details.company.all %}    
+            <p>Bike name: {{ data.p_name }}</p>
+            <p>CC of bike : {{ data.cc }}</p>
+            <p>milage: {{ data.milage }}</p>
+            <p>price of bike: {{ data.price }}</p>
+
+
+        {% endfor %}
+        </div>
+        <div>
+            <a class="btn btn-warning" href="{% url 'product:update' pk=company_details.pk %}">update</a><br>
+            <a class="btn btn-danger" href="{% url 'product:delete' pk=company_details.pk %}">Delete</a>
+        </div>
+    </div>
+{% endblock %}

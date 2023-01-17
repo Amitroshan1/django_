@@ -1,0 +1,21 @@
+{% extends 'product/basic_base.html' %}
+
+{% block content %}
+<div class = "container">
+    <div class = "jumbotron">
+        <h1>Do you really want to delete..???</h1>
+        <form method ="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="submit" class = "btn btn-danger" value = "Delete">
+                    <a class="btn btn-info" href="{% url 'product:list' %}">Cancel</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+            

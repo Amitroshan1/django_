@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class= "container">
+    <div class="row justify-content-center">
+        <div class="col-4 offset-md-2" >
+            <img src="{{ item.item_image }}" class="card" style="width: 18rem;">
+        </div>
+        <div class="col-4">
+            {% comment %} <h1>{{ item.item_name }}</h1>
+            <h2>{{ item.item_desc }}</h2>                     for fuction based we use context name as item
+            <h3>Rs {{ item.item_price }}</h3> {% endcomment %}
+
+
+
+            
+            <h1>{{ object.item_name }}</h1>
+            <h2>{{ object.item_desc }}</h2>
+            <h3>Rs {{ object.item_price }}</h3>
+            <a href ="{% url 'foodapp:delete_item' item.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

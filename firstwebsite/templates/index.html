@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+{% for item in Item_list %}
+
+<div class="container">
+    <div class="row mb-3">
+        <div class="col order-1 offset-md-2">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-mid"src="{{ item.item_image }}"/>
+            </div>
+    
+        </div>
+        <div class="col order-3 offset-md-1">
+            <h3>{{ item.item_name }}</h3>
+            <h5>{{ item.item_desc }}</h5>
+            <h6>Rs {{ item.item_price }}</h6>
+            <h6>{{ item.user_name }}</h6>
+        </div>
+        <div class="col order-5">
+            <a href="{% url 'foodapp:detail' item.id %}" class="btn btn-success">Details</a>
+        </div>
+    </div>
+  </div>
+
+    
+{% endfor %}
+
+{% endblock %}
