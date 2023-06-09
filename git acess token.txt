@@ -1,0 +1,24 @@
+https://gitlab.com/amit4321/firstpydemo/-/tree/django
+glpat-tQ919d-uN8XtWvnwEUGJ
+
+
+1--> what is differnece between project and application
+2-->what is use of virtual environment
+3-->what can you build django
+4-->what is django
+5-->how do you rate urself
+6-->how do you do in setting.py  
+7-->what is mvt design pattern --->it a degin pattern for django..models,view,template
+
+8-->what are models.
+9-->what are views.
+10-->http response and render method difference..
+11-->what is templates
+12-->what are url patterns...
+13-->what is django admin pannel...
+14-->what is makemigrations and migrate command
+15--> what is use of static files..
+16-->why do we add urls patterns and how do we acess dynamically
+17-->what are static files
+19-->what is function based views and class based views
+20--> what databased 
